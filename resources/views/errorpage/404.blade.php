@@ -18,7 +18,7 @@
     </div>
 
     <div class="lockscreen-footer text-center">
-      Copyright &copy; 2021 | <a href="https://qkohst.github.io/" target="_black">Qkoh St</a>.</strong>
+      Copyright &copy; 2021 | <a href="https://github.com/yonesmontja/" target="_black">SD Dabolding</a>.</strong>
       Theme by AdminLTE <br> <b>E</b>-Raport | Versi 1.0
     </div>
   </div>

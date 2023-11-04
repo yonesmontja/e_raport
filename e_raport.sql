@@ -47,7 +47,7 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `user_id`, `nama_lengkap`, `jenis_kelamin`, `tanggal_lahir`, `email`, `nomor_hp`, `avatar`, `created_at`, `updated_at`) VALUES
 (1, 1, 'ADMIN', 'L', '1998-05-30', 'admin@mail.com', '085232077932', 'profile_admin.jpg', '2021-10-29 02:27:37', '2022-01-06 10:05:20'),
-(2, 2, 'Qkoh St', 'L', '2021-10-05', 'qkohst19@gmail.com', '0852312654021', 'default.png', '2021-10-31 08:30:07', '2021-10-31 08:30:07');
+(2, 2, 'SD Dabolding', 'L', '2021-10-05', 'qkohst19@gmail.com', '0852312654021', 'default.png', '2021-10-31 08:30:07', '2021-10-31 08:30:07');
 
 -- --------------------------------------------------------
 
