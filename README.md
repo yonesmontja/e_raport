@@ -1,7 +1,8 @@
 ## APLIKASI E RAPORT 
 
-Aplikasi ini dibangun dengan framework laravel 7.0 dan DBMS MySQL dengan menggunakan template dari admin LTE.
-Cocok digunakan pada lembaga Jenjang SLTP Sederajat atau PKBM yang memiliki mata pelajaran muatan lokal yang banyak sehingga tidak dapat menggunakan aplikasi E raport dari Dinas Pendidikan.
+Aplikasi inovatif ini dibangun dengan cermat menggunakan kerangka kerja Laravel 8.0, yang dikenal luas sebagai salah satu kerangka kerja paling terdepan dalam pengembangan aplikasi web. Kami juga menggunakan sistem manajemen basis data MySQL, sebuah platform yang terkenal karena stabilitas dan kehandalannya. Tampilan antarmuka yang elegan dan intuitif telah diadopsi dari template admin LTE, yang memberikan pengalaman pengguna yang optimal.
+Aplikasi ini telah dirancang untuk memenuhi kebutuhan lembaga pendidikan tingkat Sekolah Dasar dengan karakteristik khusus mereka. Salah satu tantangan utama yang sering dihadapi oleh lembaga pendidikan tingkat ini adalah beragamnya mata pelajaran muatan lokal yang tidak dapat tertampung dengan baik dalam aplikasi E-raport standar yang disediakan oleh Dinas Pendidikan. Aplikasi ini memberikan solusi yang sempurna, memungkinkan pengelolaan yang efisien dari beragam mata pelajaran lokal. Dengan dukungan dari Laravel 8.0 dan MySQL, pengguna dapat mengelola data siswa, nilai-nilai, dan informasi kritis lainnya dengan mudah dan efektif.
+Tujuan utama aplikasi ini adalah untuk membantu lembaga-lembaga pendidikan di tingkat SD dalam mengoptimalkan pengelolaan data mereka. Pengguna dapat mengakses, memasukkan, dan mengelola data siswa, nilai-nilai, serta mata pelajaran dengan sangat mudah. Aplikasi ini sangat relevan untuk lembaga-lembaga pendidikan yang memiliki kebutuhan unik dan kompleks, yang tidak dapat dipenuhi oleh solusi E-raport konvensional. Dengan bantuan kerangka kerja Laravel dan basis data MySQL, aplikasi ini menawarkan fleksibilitas dan kemampuan yang diperlukan untuk mengatasi tantangan-tantangan yang mungkin dihadapi oleh lembaga-lembaga pendidikan tersebut.
 
 ### Adapun fitur dari Aplikasi E Raport ini secara global antara lain :
 
@@ -15,7 +16,7 @@ Cocok digunakan pada lembaga Jenjang SLTP Sederajat atau PKBM yang memiliki mata
 
 ### Link Demo : 
 
-https://bit.ly/demo-eraport
+https://sdinpresdabolding.sch.id
 
 #### 1. User Admin 
 - username : admin 
