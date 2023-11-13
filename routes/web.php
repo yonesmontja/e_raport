@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,22 +22,22 @@ Route::get('/unauthorized', function () {
 });
 
 
-Route::get('/', 'AuthController@index')->name('login');
-Route::post('/', 'AuthController@store')->name('login');
-Route::post('/settingtapel', 'AuthController@setting_tapel')->name('setting.tapel');
+Route::get('/', [AuthController::class, 'index'])->name('login');
+Route::post('/', [AuthController::class, 'store'])->name('login');
+Route::post('/settingtapel', [AuthController::class, 'setting_tapel'])->name('setting.tapel');
 
 Route::group(['middleware' => ['auth']], function () {
 
-  Route::get('/logout', 'AuthController@logout')->name('logout');
-  Route::get('/password', 'AuthController@view_ganti_password')->name('gantipassword');
-  Route::post('/password', 'AuthController@ganti_password')->name('gantipassword');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::get('/password', [AuthController::class, 'view_ganti_password'])->name('gantipassword');
+    Route::post('/password', [AuthController::class, 'ganti_password'])->name('gantipassword');
 
-  Route::get('/profile', 'ProfileUserController@index')->name('profile');
+    Route::get('/profile', [ProfileUserController::class, 'index'])->name('profile');
 
-  Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-  // Route User Admin 
-  Route::group(['middleware' => 'checkRole:1'], function () {
+    // Route User Admin
+    Route::group(['middleware' => ['auth', 'checkRole:1']], function () {
     Route::group(['prefix' => 'admin'], function () {
       Route::resource('profileadmin', 'Admin\ProfileController',  [
         'uses' => ['update']
@@ -126,7 +129,7 @@ Route::group(['middleware' => ['auth']], function () {
           'uses' => ['index']
         ]);
 
-        // Hasil Raport K13 
+        // Hasil Raport K13
         Route::resource('k13statuspenilaian', 'Admin\K13\StatusPenilaianController',  [
           'uses' => ['index', 'store']
         ]);
@@ -170,7 +173,7 @@ Route::group(['middleware' => ['auth']], function () {
           'uses' => ['index']
         ]);
 
-        // Hasil Raport K13 
+        // Hasil Raport K13
         Route::resource('ktspstatuspenilaian', 'Admin\KTSP\StatusPenilaianController',  [
           'uses' => ['index', 'store']
         ]);
@@ -194,9 +197,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     });
   });
-  // End Route User Admin 
+  // End Route User Admin
 
-  // Route User Guru 
+  // Route User Guru
   Route::group(['middleware' => 'checkRole:2'], function () {
     Route::group(['prefix' => 'guru'], function () {
 
@@ -253,7 +256,7 @@ Route::group(['middleware' => ['auth']], function () {
           Route::get('nilaiptspas/import', 'Guru\K13\NilaiPtsPasController@format_import')->name('nilaiptspas.format_import');
           Route::post('nilaiptspas/import', 'Guru\K13\NilaiPtsPasController@import')->name('nilaiptspas.import');
 
-          // End Import Nilai 
+          // End Import Nilai
           Route::resource('nilaipengetahuan', 'Guru\K13\NilaiPengetahuanController',  [
             'uses' => ['index', 'create', 'store', 'update']
           ]);
@@ -395,9 +398,9 @@ Route::group(['middleware' => ['auth']], function () {
       // End Route Wali Kelas
     });
   });
-  // End Route User Guru 
+  // End Route User Guru
 
-  // Route User Siswa 
+  // Route User Siswa
   Route::group(['middleware' => 'checkRole:3'], function () {
 
     Route::resource('profilesiswa', 'Siswa\ProfileController',  [
@@ -426,7 +429,7 @@ Route::group(['middleware' => ['auth']], function () {
     });
     // End  Raport KTSP Siswa
   });
-  // End Route User Siswa 
+  // End Route User Siswa
 
 });
 
