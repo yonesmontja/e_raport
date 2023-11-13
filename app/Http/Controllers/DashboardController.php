@@ -86,7 +86,7 @@ class DashboardController extends Controller
 
                 $data_capaian_penilaian = Pembelajaran::where('guru_id', $guru->id)->whereIn('kelas_id', $id_kelas)->where('status', 1)->get();
 
-                // Capaian Penilaian K13 
+                // Capaian Penilaian K13
                 if (session()->get('kurikulum') == '2013') {
                     foreach ($data_capaian_penilaian as $penilaian) {
                         $kkm = K13KkmMapel::where('mapel_id', $penilaian->mapel->id)->where('kelas_id', $penilaian->kelas_id)->first();
